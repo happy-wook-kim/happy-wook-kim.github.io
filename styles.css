@@ -1,0 +1,316 @@
+/* =========================================================
+   김진욱 — Frontend Portfolio
+   Concept "Drafting": cool drafting-gray paper, white gallery
+   frames, ink type, monospace spec sheets. The work is the hero.
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+:root {
+  --paper: #eceef1;
+  --paper-sunken: #e4e7ea;
+  --surface: #ffffff;
+  --ink: #16181d;
+  --muted: #5e646e;
+  --faint: #8b909a;
+  --line: #d6dae0;
+  --line-strong: #c3c8d0;
+  --accent: #1e3af0;
+  --accent-ink: #1330c4;
+
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, system-ui,
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --wrap: 1180px;
+  --gap: clamp(1rem, 3vw, 2rem);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  /* 한글은 어절(단어) 단위로 줄바꿈 — '그리/고'처럼 중간에서 끊기지 않도록 */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+
+/* ---- shared type devices ---- */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: var(--accent);
+  display: inline-block;
+}
+
+.section { padding: clamp(64px, 11vh, 132px) 0; }
+.section--sunken { background: var(--paper-sunken); }
+
+h1, h2, h3 { margin: 0; letter-spacing: -0.02em; line-height: 1.08; font-weight: 800; }
+
+.section__title { font-size: clamp(1.7rem, 3.6vw, 2.7rem); }
+.lead { color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.15rem); max-width: 46ch; }
+
+/* =========================================================
+   Nav
+   ========================================================= */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--paper) 82%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.brand { display: flex; align-items: baseline; gap: 10px; font-weight: 800; font-size: 1.05rem; letter-spacing: -0.01em; }
+.brand small { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.14em; color: var(--faint); text-transform: uppercase; }
+.nav__cta {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  padding: 9px 16px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav__cta:hover { background: var(--ink); color: var(--paper); }
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.hero { padding: clamp(56px, 9vh, 104px) 0 clamp(40px, 7vh, 72px); }
+.hero h1 {
+  font-size: clamp(2.5rem, 6.6vw, 5rem);
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+.hero h1 .accent { color: var(--accent); }
+.hero__sub {
+  margin: 26px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.02rem, 1.7vw, 1.22rem);
+  max-width: 54ch;
+}
+.hero__meta {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 8px;
+}
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+.hero__frame { margin-top: 0; }
+
+/* =========================================================
+   Browser frame (signature) — screenshots as live windows
+   ========================================================= */
+.frame {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(22, 24, 29, 0.03), 0 26px 60px -30px rgba(22, 24, 29, 0.35);
+}
+.frame__bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(var(--surface), #fbfbfc);
+}
+.frame__bar .dot { width: 10px; height: 10px; border-radius: 50%; background: #dfe2e7; }
+.frame__url {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--faint);
+  margin-left: 10px;
+  letter-spacing: 0.01em;
+}
+.frame > img, .frame > video { width: 100%; display: block; }
+.frame--scroll { max-height: 600px; }
+.frame--scroll .frame__scroll { max-height: 553px; overflow-y: auto; }
+.frame--scroll .frame__scroll img { width: 100%; }
+.frame--phone { max-width: 300px; }
+/* 폰 프레임은 세로로 더 길게 (모바일 화면 특성) */
+.frame--phone.frame--scroll { max-height: 720px; }
+.frame--phone.frame--scroll .frame__scroll { max-height: 673px; }
+
+/* =========================================================
+   Deliver (강점)
+   ========================================================= */
+.deliver__grid {
+  margin-top: clamp(30px, 5vw, 48px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.deliver__cell { background: var(--surface); padding: 28px 24px 30px; }
+.deliver__no { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); letter-spacing: 0.08em; }
+.deliver__cell h3 { margin: 14px 0 8px; font-size: 1.12rem; font-weight: 700; letter-spacing: -0.01em; }
+.deliver__cell p { margin: 0; color: var(--muted); font-size: 0.94rem; line-height: 1.55; }
+
+/* =========================================================
+   Work / case study
+   ========================================================= */
+.work__head { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: end; }
+.work__title { font-size: clamp(1.7rem, 3.4vw, 2.5rem); }
+.work__oneliner { font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.02em; color: var(--muted); margin-top: 14px; }
+
+/* spec sheet (signature) */
+.spec {
+  margin: 0;
+  border-top: 1px solid var(--line-strong);
+}
+.spec__row {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.spec__k { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--faint); }
+.spec__v { font-size: 0.95rem; }
+.spec__v a { color: var(--accent); font-weight: 600; }
+.spec__v a:hover { text-decoration: underline; }
+
+.work__overview { margin: clamp(34px, 5vw, 52px) 0 0; max-width: 62ch; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.12rem); }
+.work__lead { margin-top: clamp(30px, 5vw, 48px); }
+
+/* gallery */
+.gallery { margin-top: clamp(30px, 5vw, 48px); display: grid; grid-template-columns: repeat(12, 1fr); gap: 22px; }
+.gallery__cap { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; color: var(--faint); margin: 12px 2px 0; text-transform: uppercase; }
+.g-wide { grid-column: span 8; }
+.g-side { grid-column: span 4; }
+.g-half { grid-column: span 6; }
+.g-third { grid-column: span 4; }
+
+/* work sub-labels (Why it matters / Screens) */
+.work__eyebrow { margin-top: clamp(44px, 6vw, 72px); margin-bottom: 16px; }
+.work__eyebrow + .deliver__grid,
+.work__eyebrow + .work__lead { margin-top: 0; }
+
+.cta-row { margin-top: clamp(44px, 6vw, 72px); }
+.work__note { margin-top: clamp(44px, 6vw, 72px); font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.02em; color: var(--faint); }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 15px 26px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn:hover { background: var(--accent-ink); transform: translateY(-1px); }
+.btn--ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: var(--paper); }
+.btn .arrow { transition: transform 0.2s; }
+.btn:hover .arrow { transform: translate(3px, -3px); }
+
+/* =========================================================
+   Contact
+   ========================================================= */
+.contact { text-align: center; }
+.contact h2 { font-size: clamp(2rem, 5vw, 3.4rem); letter-spacing: -0.03em; }
+.contact p { color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.15rem); margin: 20px auto 34px; }
+.contact .eyebrow { color: var(--accent); } /* .contact p가 회색으로 덮지 않게 — 옆 줄과 같은 accent */
+
+/* footer */
+.footer { border-top: 1px solid var(--line); padding: 30px 0 40px; }
+.footer__inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--font-mono); font-size: 0.74rem; color: var(--faint); letter-spacing: 0.02em; flex-wrap: wrap; }
+.footer a:hover { color: var(--ink); }
+
+/* =========================================================
+   Reveal on scroll
+   ========================================================= */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 900px) {
+  .deliver__grid { grid-template-columns: repeat(2, 1fr); }
+  .work__head { grid-template-columns: 1fr; gap: 26px; align-items: start; }
+  .g-wide, .g-side, .g-half, .g-third { grid-column: span 12; }
+  .frame--phone { max-width: 240px; margin-inline: auto; }
+}
+@media (max-width: 560px) {
+  .deliver__grid { grid-template-columns: 1fr; }
+  .nav__cta { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .btn, .nav__cta { transition: none; }
+}
+
+:where(a, button):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* =========================================================
+   Print → clean PDF export
+   ========================================================= */
+@media print {
+  :root { --paper: #fff; --paper-sunken: #fff; }
+  .nav, .footer, .cta-row, .reveal { position: static; }
+  .nav { display: none; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .section { padding: 26px 0; break-inside: avoid; }
+  .frame { box-shadow: none; break-inside: avoid; }
+  .frame--scroll, .frame--scroll .frame__scroll { max-height: none; overflow: visible; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-family: var(--font-mono); font-size: 0.7em; color: #555; }
+  .nav__cta::after, .btn::after { content: ""; }
+  body { background: #fff; }
+}
