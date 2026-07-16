@@ -4,19 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>김진욱 · 풀스택 개발자 포트폴리오</title>
-  <meta name="description" content="개발부터 배포·운영까지 한 사람이 맡는 개발자 김진욱. 정부기관 공식 웹사이트 개발 사례." />
+  <meta name="description" content="개발부터 배포·운영까지 한 사람이 맡는 개발자 김진욱. 정부기관 공식 웹사이트 개발 사례와 개인 프로젝트." />
   <meta property="og:title" content="김진욱 · 풀스택 개발자" />
   <meta property="og:description" content="개발부터 배포·운영까지 한 사람이 맡는 개발자." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/variable/pretendardvariable.min.css" />
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="/styles.css?v=15" />
 </head>
 <body>
   <!-- Nav -->
   <header class="nav">
     <div class="wrap nav__inner">
-      <a class="brand" href="#top">김진욱 <small>Developer</small></a>
+      <a class="brand" href="/">김진욱 <small>Developer</small></a>
       <a class="nav__cta" href="#contact">연락하기</a>
     </div>
   </header>
@@ -41,11 +41,11 @@
       </div>
     </section>
 
-    <!-- What I deliver -->
+    <!-- What you get -->
     <section class="section section--sunken">
       <div class="wrap">
         <p class="eyebrow">What you get</p>
-        <h2 class="section__title">맡기면, 이렇게 나옵니다.</h2>
+        <h2 class="section__title">맡겨주시면, 이렇게 나옵니다.</h2>
         <div class="deliver__grid reveal">
           <div class="deliver__cell">
             <span class="deliver__no">01</span>
@@ -71,120 +71,35 @@
       </div>
     </section>
 
-    <!-- Selected work: ai-kalis case study -->
+    <!-- Selected work: project cards -->
     <section class="section" id="work">
       <div class="wrap">
         <p class="eyebrow">Selected work</p>
-        <div class="work__head reveal">
-          <div>
-            <h2 class="work__title">K-건설안전 AI 콘텐츠 공모전</h2>
-            <p class="work__oneliner">국토교통부 · 국토안전관리원 공식 공모전 웹사이트</p>
-          </div>
-          <dl class="spec">
-            <div class="spec__row"><dt class="spec__k">역할</dt><dd class="spec__v">개발 · 배포 · 운영</dd></div>
-            <div class="spec__row"><dt class="spec__k">클라이언트</dt><dd class="spec__v">국토교통부 · 국토안전관리원</dd></div>
-            <div class="spec__row"><dt class="spec__k">유형</dt><dd class="spec__v">공모전 공식 웹사이트</dd></div>
-            <div class="spec__row"><dt class="spec__k">스택</dt><dd class="spec__v">Next.js · React · TypeScript · Tailwind</dd></div>
-            <div class="spec__row"><dt class="spec__k">도메인</dt><dd class="spec__v">ai-kalis.com</dd></div>
-          </dl>
+        <h2 class="section__title">직접 만든 것들.</h2>
+        <div class="cards reveal">
+          <a class="card" href="/work/ai-kalis.html">
+            <div class="card__thumb">
+              <img src="/assets/img/card_ai-kalis.jpg" alt="K-건설안전 AI 콘텐츠 공모전 메인 화면" />
+            </div>
+            <div class="card__body">
+              <span class="card__type">공식 웹사이트</span>
+              <h3 class="card__title">K-건설안전 AI 콘텐츠 공모전</h3>
+              <p class="card__desc">국토교통부·국토안전관리원 공식 공모전 웹사이트. 공모 안내부터 국민 참여, 수상 후보작 공개·검증까지.</p>
+              <span class="card__more">자세히 보기 <span class="arrow">→</span></span>
+            </div>
+          </a>
+          <a class="card" href="/work/bbobgi.html">
+            <div class="card__thumb">
+              <img src="/assets/img/card_bbobgi.jpg" alt="뽑기 게임 화면" />
+            </div>
+            <div class="card__body">
+              <span class="card__type">개인 프로젝트</span>
+              <h3 class="card__title">뽑기 — 랜덤 추첨 게임</h3>
+              <p class="card__desc">카드·룰렛·사다리·경마·주사위 5종 미니게임. React·TypeScript로 직접 기획·제작, 지금 바로 플레이할 수 있습니다.</p>
+              <span class="card__more">자세히 보기 <span class="arrow">→</span></span>
+            </div>
+          </a>
         </div>
-
-        <p class="work__overview reveal">
-          공모 안내부터 국민 참여, 수상 후보작 공개·검증까지 담긴 공식 사이트를
-          직접 개발했습니다. 영상·이미지 수상작을 직접 감상하는 갤러리,
-          출품자 개인정보 보호, 검색 노출까지 실제 서비스 수준으로 완성했습니다.
-        </p>
-
-        <!-- 신뢰의 근거 -->
-        <p class="eyebrow work__eyebrow">Why it matters</p>
-        <div class="deliver__grid reveal">
-          <div class="deliver__cell">
-            <span class="deliver__no">REFERENCE</span>
-            <h3>정부기관 공식 사이트</h3>
-            <p>국토교통부·국토안전관리원의 공식 공모전 웹사이트로 만들었습니다. 공공기관이 실제로 채택해 대외 공개한 서비스입니다.</p>
-          </div>
-          <div class="deliver__cell">
-            <span class="deliver__no">OWNERSHIP</span>
-            <h3>혼자, 처음부터 끝까지</h3>
-            <p>설계된 기획을 받아 개발·배포·운영을 한 사람이 단독으로 맡았습니다. 여러 곳에 나눠 맡길 필요 없이 끝까지 책임집니다.</p>
-          </div>
-          <div class="deliver__cell">
-            <span class="deliver__no">LIVE</span>
-            <h3>실제로 운영된 서비스</h3>
-            <p>공모 기간 동안 국민을 대상으로 접수·공개검증·결과 공개까지 돌아간 실서비스입니다.</p>
-          </div>
-          <div class="deliver__cell">
-            <span class="deliver__no">SECURITY</span>
-            <h3>서버에서 지킨 개인정보</h3>
-            <p>출품자 실명을 서버에서 가려, 화면뿐 아니라 페이지 소스에도 남지 않게 처리했습니다. 공공 서비스의 기본기입니다.</p>
-          </div>
-        </div>
-
-        <!-- 화면 둘러보기 -->
-        <p class="eyebrow work__eyebrow">Screens</p>
-        <!-- 메인 화면 (배경 영상 자동재생) -->
-        <figure class="frame reveal work__lead">
-          <div class="frame__bar">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="frame__url">ai-kalis.com</span>
-          </div>
-          <video src="assets/video/hero_demo.mp4?v=2" poster="assets/img/home_hero.jpg" autoplay muted loop playsinline preload="metadata" aria-label="메인 화면 배경 영상 자동재생"></video>
-        </figure>
-        <p class="gallery__cap">메인 화면 — 배경 영상이 자동 재생됩니다</p>
-
-        <!-- gallery -->
-        <div class="gallery reveal">
-          <div class="g-wide">
-            <div class="frame frame--scroll">
-              <div class="frame__bar">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="frame__url">ai-kalis.com/results</span>
-              </div>
-              <div class="frame__scroll">
-                <img src="assets/img/results_full.jpg?v=2" alt="수상 후보작 전체 페이지" />
-              </div>
-            </div>
-            <p class="gallery__cap">수상 후보작 페이지 — 스크롤해 보세요</p>
-          </div>
-          <div class="g-side">
-            <div class="frame frame--phone frame--scroll">
-              <div class="frame__bar">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-              </div>
-              <div class="frame__scroll">
-                <img src="assets/img/results_mobile.jpg?v=2" alt="모바일 화면" />
-              </div>
-            </div>
-            <p class="gallery__cap">모바일 대응 — 스크롤해 보세요</p>
-          </div>
-        </div>
-
-        <!-- 인터랙션 둘러보기 -->
-        <div class="gallery reveal">
-          <div class="g-third">
-            <div class="frame">
-              <div class="frame__bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="frame__url">스크롤</span></div>
-              <video src="assets/video/scroll_demo.mp4" poster="assets/img/home_hero.jpg" autoplay muted loop playsinline preload="metadata" aria-label="스크롤 인터랙션"></video>
-            </div>
-            <p class="gallery__cap">스크롤에 따라 나타나는 화면</p>
-          </div>
-          <div class="g-third">
-            <div class="frame">
-              <div class="frame__bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="frame__url">영상</span></div>
-              <video src="assets/video/video_demo.mp4" poster="assets/img/video_modal.jpg" autoplay muted loop playsinline preload="metadata" aria-label="영상 확대 재생"></video>
-            </div>
-            <p class="gallery__cap">클릭하면 확대 재생되는 영상</p>
-          </div>
-          <div class="g-third">
-            <div class="frame">
-              <div class="frame__bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="frame__url">이미지</span></div>
-              <img src="assets/img/image_lightbox.jpg" alt="이미지 라이트박스" />
-            </div>
-            <p class="gallery__cap">원본을 크게 보는 이미지</p>
-          </div>
-        </div>
-
-        <p class="work__note">국토교통부 · 국토안전관리원 공식 사이트로 공모 기간 동안 운영되었습니다.</p>
       </div>
     </section>
 
