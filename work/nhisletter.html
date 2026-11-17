@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>국민건강보험공단 명절카드 · 김진욱 포트폴리오</title>
-  <meta name="description" content="국민건강보험공단 공식 명절카드 웹사이트 — 2만명 발송, 15일 운영에 저장·공유 6,528건, 20만 요청을 서버 오류 0건으로 처리한 개발·인프라·운영 단독 수행 사례." />
+  <meta name="description" content="국민건강보험공단 공식 명절카드 웹사이트 — 2만 명 발송, 15일 운영에 저장·공유 6,528건, 20만 요청을 서버 오류 0건으로 처리한 개발·인프라·운영 단독 수행 사례." />
   <meta property="og:title" content="국민건강보험공단 명절카드 · 김진욱" />
   <meta property="og:description" content="15일 운영에 저장·공유 6,528건, 20만 요청을 서버 오류 0건으로 처리한 공공기관 웹사이트 개발·운영 사례." />
   <meta property="og:type" content="article" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/variable/pretendardvariable.min.css" />
-  <link rel="stylesheet" href="/styles.css?v=15" />
+  <link rel="stylesheet" href="/styles.css?v=16" />
 </head>
 <body>
   <!-- Nav -->
@@ -25,29 +25,35 @@
     <section class="section work-page">
       <div class="wrap">
         <a class="backlink" href="/#work">← 프로젝트 목록</a>
-        <p class="eyebrow" style="margin-top:18px">Case study</p>
+        <p class="eyebrow" style="margin-top:18px">Case study · 외주 프로젝트</p>
         <div class="work__head reveal">
           <div>
             <h2 class="work__title">국민건강보험공단 명절카드</h2>
             <p class="work__oneliner">국민이 직접 만들어 보내는 공식 명절 인사 카드</p>
+            <dl class="spec">
+              <div class="spec__row"><dt class="spec__k">역할</dt><dd class="spec__v">개발 · 인프라 · 배포 · 운영</dd></div>
+              <div class="spec__row"><dt class="spec__k">클라이언트</dt><dd class="spec__v">국민건강보험공단</dd></div>
+              <div class="spec__row"><dt class="spec__k">유형</dt><dd class="spec__v">공식 캠페인 웹사이트</dd></div>
+              <div class="spec__row"><dt class="spec__k">스택</dt><dd class="spec__v">React 19 · TypeScript · Vite · PHP · MySQL · nginx</dd></div>
+              <div class="spec__row"><dt class="spec__k">운영 기간</dt><dd class="spec__v">2026.9.16 ~ 9.30 (15일)</dd></div>
+              <div class="spec__row"><dt class="spec__k">도메인</dt><dd class="spec__v">nhisletter.kr (운영 종료)</dd></div>
+            </dl>
           </div>
-          <dl class="spec">
-            <div class="spec__row"><dt class="spec__k">역할</dt><dd class="spec__v">개발 · 인프라 · 배포 · 운영</dd></div>
-            <div class="spec__row"><dt class="spec__k">클라이언트</dt><dd class="spec__v">국민건강보험공단</dd></div>
-            <div class="spec__row"><dt class="spec__k">유형</dt><dd class="spec__v">공식 캠페인 웹사이트</dd></div>
-            <div class="spec__row"><dt class="spec__k">스택</dt><dd class="spec__v">React 19 · TypeScript · Vite · PHP · MySQL · nginx</dd></div>
-            <div class="spec__row"><dt class="spec__k">운영 기간</dt><dd class="spec__v">2026.9.16 ~ 9.30 (15일)</dd></div>
-            <div class="spec__row"><dt class="spec__k">도메인</dt><dd class="spec__v">nhisletter.kr (운영 종료)</dd></div>
-          </dl>
+          <figure class="frame work__hero">
+            <div class="frame__bar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="frame__url">nhisletter.kr</span>
+            </div>
+            <img src="/assets/img/card_nhisletter.jpg" alt="국민건강보험공단 명절카드 메인 화면" />
+          </figure>
+          <p class="work__overview">
+            카드를 고르고 문구를 넣으면 그 자리에서 이미지로 합성돼, 저장하거나
+            카카오톡으로 보낼 수 있는 사이트입니다. 화면 개발만이 아니라
+            서버 구축부터 도메인·HTTPS·배포 자동화·부하 대비·운영 모니터링까지
+            혼자 맡았습니다. 2만 명 대상 발송을 서버 오류 없이 넘겼고,
+            캠페인이 끝날 때까지 15일간 한 번도 멈추지 않았습니다.
+          </p>
         </div>
-
-        <p class="work__overview reveal">
-          카드를 고르고 문구를 넣으면 그 자리에서 이미지로 합성돼, 저장하거나
-          카카오톡으로 보낼 수 있는 사이트입니다. 화면 개발만이 아니라
-          서버 구축부터 도메인·HTTPS·배포 자동화·부하 대비·운영 모니터링까지
-          혼자 맡았습니다. 2만명 대상 발송을 서버 오류 없이 넘겼고,
-          캠페인이 끝날 때까지 15일간 한 번도 멈추지 않았습니다.
-        </p>
 
         <!-- 실제 운영 지표 -->
         <p class="eyebrow work__eyebrow">In production</p>
@@ -59,8 +65,8 @@
           </div>
           <div class="deliver__cell">
             <span class="deliver__no">CONVERSION</span>
-            <h3>들어온 사람의 49%</h3>
-            <p>홈 화면 진입 13,276회 중 절반가량이 카드를 완성해 저장하거나 공유까지 갔습니다.</p>
+            <h3>진입 대비 49%</h3>
+            <p>홈 화면 진입 13,276회 대비 저장·공유가 6,528건입니다.</p>
           </div>
           <div class="deliver__cell">
             <span class="deliver__no">PEAKS</span>
@@ -80,7 +86,7 @@
           <div class="deliver__cell">
             <span class="deliver__no">PERFORMANCE</span>
             <h3>방문자당 1.8MB</h3>
-            <p>2만명이 한꺼번에 들어올 것을 계산해, 전달받은 9MB 애니메이션 카드를 목록용 정지 이미지로 따로 만들었습니다. 그대로였다면 120GB가 나갔을 트래픽입니다.</p>
+            <p>2만 명이 한꺼번에 들어올 것을 계산해, 전달받은 9MB 애니메이션 카드를 목록용 정지 이미지로 따로 만들었습니다. 원본 그대로 썼다면 트래픽이 120GB 나갔을 겁니다.</p>
           </div>
           <div class="deliver__cell">
             <span class="deliver__no">MOBILE</span>
@@ -125,7 +131,7 @@
                 <img src="/assets/img/nhis_home_mobile.jpg" alt="모바일 메인 화면" />
               </div>
             </div>
-            <p class="gallery__cap">이용자 98%가 모바일 — 스크롤해 보세요</p>
+            <p class="gallery__cap">이용자 98.6%가 모바일 — 스크롤해 보세요</p>
           </div>
         </div>
 
@@ -182,7 +188,7 @@
           <div class="deliver__cell">
             <span class="deliver__no">01</span>
             <h3>카카오톡에서 저장이 안 되던 문제</h3>
-            <p>카카오톡 인앱 브라우저는 일반적인 방식의 이미지 저장을 지원하지 않습니다. 다운로드가 시작되는 것처럼 보이다 조용히 사라졌습니다. 원인을 찾아 서버가 직접 파일을 내려주는 방식으로 바꿨습니다. 카카오톡으로 들어온 이용자들이 그 뒤로 정상 저장했습니다.</p>
+            <p>카카오톡 인앱 브라우저는 일반적인 방식의 이미지 저장을 지원하지 않습니다. 다운로드가 시작되는 것처럼 보이다 조용히 사라졌습니다. 원인을 찾아 서버가 직접 파일을 내려주는 방식으로 바꿨고, 그 뒤로 카카오톡으로 들어온 이용자도 정상적으로 저장했습니다.</p>
           </div>
           <div class="deliver__cell">
             <span class="deliver__no">02</span>
@@ -192,27 +198,27 @@
           <div class="deliver__cell">
             <span class="deliver__no">03</span>
             <h3>같은 순간에 만든 카드가 섞이던 문제</h3>
-            <p>파일 이름이 밀리초까지만 달라, 동시에 저장한 두 사람의 카드가 서로 덮어써질 수 있었습니다. 남의 인사말이 전달될 수 있는 문제라 이름 규칙부터 바로잡았습니다.</p>
+            <p>파일 이름을 밀리초 단위 시각으로만 지어, 같은 순간에 저장한 두 사람의 카드가 서로 덮어써질 수 있었습니다. 남의 인사말이 전달될 수 있는 문제라 이름 규칙부터 바로잡았습니다.</p>
           </div>
           <div class="deliver__cell">
             <span class="deliver__no">04</span>
             <h3>발송 전 부하 대비</h3>
-            <p>2만명이 몰릴 상황을 계산해 서버 사양·동시 처리량·요청 제한을 미리 조정했습니다. 실제 피크는 분당 4,182건이었고 여유 있게 넘겼습니다.</p>
+            <p>2만 명이 몰릴 상황을 계산해 서버 사양·동시 처리량·요청 제한을 미리 조정했습니다. 실제 피크는 분당 4,182건이었고 여유 있게 넘겼습니다.</p>
           </div>
           <div class="deliver__cell">
             <span class="deliver__no">05</span>
             <h3>한 번도 돌지 않던 정리 작업</h3>
-            <p>오래된 파일을 지우는 예약 작업이 서버에 cron 이 없어 한 번도 실행되지 않고 있었습니다. 운영 중에 찾아내 systemd 타이머로 옮겼고, 그 뒤로 내려받기용 임시 파일은 하루 넘게 쌓이지 않았습니다.</p>
+            <p>오래된 파일을 지우는 예약 작업이 서버에 cron이 없어 한 번도 실행되지 않고 있었습니다. 운영 중에 찾아내 systemd 타이머로 옮겼고, 그 뒤로 내려받기용 임시 파일은 하루 넘게 쌓이지 않았습니다.</p>
           </div>
           <div class="deliver__cell">
             <span class="deliver__no">06</span>
             <h3>카드별 공유 수를 역산</h3>
-            <p>DB에는 카드 번호가 남지 않았습니다. 서버에 남은 공유 이미지 1,271장을 원본 카드와 대조해 분류했습니다. 1번 1,048 · 2번 212 · 3번 약 1,182.</p>
+            <p>DB에는 카드 번호가 남지 않았습니다. 서버에 남은 공유 이미지 1,271장을 원본 카드와 대조해 1·2번을 나누고, 합성 이미지가 남지 않는 3번은 전체 공유 수에서 역산했습니다. 1번 1,048 · 2번 212 · 3번 약 1,182.</p>
           </div>
           <div class="deliver__cell">
             <span class="deliver__no">07</span>
             <h3>이모지가 2자로 세지던 문제</h3>
-            <p>글자 수를 코드 단위로 세서 🎉 가 2자, 가족 이모지는 8자로 잡혔습니다. 사람이 보는 글자 단위로 세도록 바꿔 50자 한도를 정확히 맞췄습니다.</p>
+            <p>글자 수를 코드 단위로 세서 🎉가 2자, 가족 이모지는 8자로 잡혔습니다. 사람이 보는 글자 단위로 세도록 바꿔 50자 한도를 정확히 맞췄습니다.</p>
           </div>
           <div class="deliver__cell">
             <span class="deliver__no">08</span>
@@ -220,8 +226,6 @@
             <p>종료 후 집계 기록을 백업하고, 이용자가 쓴 문구가 담긴 이미지는 서버와 함께 지웠습니다. 클라우드 자원도 남김없이 정리해 비용이 더 나가지 않게 했습니다.</p>
           </div>
         </div>
-
-        <p class="work__note">국민건강보험공단 공식 사이트로, 2026년 추석 캠페인(9/16~9/30) 동안 운영했습니다.</p>
       </div>
     </section>
 
@@ -230,7 +234,7 @@
       <div class="wrap">
         <p class="eyebrow" style="justify-content:center">Contact</p>
         <h2>만들 것이 있으신가요?</h2>
-        <p>홈페이지·랜딩·웹앱, 개발부터 배포·운영까지 상담해 드립니다.</p>
+        <p>홈페이지·랜딩 페이지·웹앱, 개발부터 배포·운영까지 맡겨 주세요.</p>
         <a class="btn" href="mailto:catdog6210@gmail.com">이메일 보내기 <span class="arrow">↗</span></a>
       </div>
     </section>

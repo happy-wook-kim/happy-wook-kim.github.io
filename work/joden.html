@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JODEN — 실시간 대전 게임 · 김진욱 포트폴리오</title>
+  <meta name="description" content="브라우저에서 1:1~2:2로 붙는 실시간 픽셀아트 대전 게임. 서버 권위 넷코드와 결정론 시뮬레이션으로 만든 개인 프로젝트." />
+  <meta property="og:title" content="JODEN — 실시간 대전 게임 · 김진욱" />
+  <meta property="og:description" content="브라우저에서 1:1~2:2로 붙는 실시간 픽셀아트 대전 게임." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/variable/pretendardvariable.min.css" />
+  <link rel="stylesheet" href="/styles.css?v=16" />
+</head>
+<body>
+  <!-- Nav -->
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="/">김진욱 <small>Developer</small></a>
+      <a class="nav__cta" href="/#contact">연락하기</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="section work-page">
+      <div class="wrap">
+        <a class="backlink" href="/#work">← 프로젝트 목록</a>
+        <p class="eyebrow" style="margin-top:18px">Case study · 개인 프로젝트</p>
+        <div class="work__head reveal">
+          <div>
+            <h2 class="work__title">JODEN — 실시간 대전 게임</h2>
+            <p class="work__oneliner">브라우저에서 1:1~2:2로 붙는 픽셀아트 대전 게임</p>
+            <dl class="spec">
+              <div class="spec__row"><dt class="spec__k">역할</dt><dd class="spec__v">기획 · 설계 · 개발</dd></div>
+              <div class="spec__row"><dt class="spec__k">유형</dt><dd class="spec__v">웹 멀티플레이 게임</dd></div>
+              <div class="spec__row"><dt class="spec__k">스택</dt><dd class="spec__v">TypeScript · React 19 · Canvas · socket.io · Vite</dd></div>
+              <div class="spec__row"><dt class="spec__k">구성</dt><dd class="spec__v">챔피언 13 · 증강 38 · 아이템 49</dd></div>
+              <div class="spec__row"><dt class="spec__k">테스트</dt><dd class="spec__v">3,700여 개 (Vitest)</dd></div>
+            </dl>
+          </div>
+          <figure class="frame work__hero">
+            <div class="frame__bar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="frame__url">JODEN</span>
+            </div>
+            <img src="/assets/img/card_joden.jpg" alt="JODEN 2:2 교전 화면" />
+          </figure>
+          <p class="work__overview">
+            다리 하나뿐인 전장에서 무작위로 받은 챔피언에 증강과 아이템을 쌓아 상대 넥서스를 부수는 게임입니다.
+            한 판은 보통 10~15분이고, 빈자리는 봇이 채워 혼자서도 할 수 있습니다.
+            게임 규칙, 서버, 화면을 패키지로 나눠 처음부터 설계했습니다.
+          </p>
+        </div>
+
+        <p class="eyebrow work__eyebrow">Highlights</p>
+        <div class="deliver__grid reveal">
+          <div class="deliver__cell">
+            <span class="deliver__no">NETCODE</span>
+            <h3>서버 권위 30Hz</h3>
+            <p>서버가 30Hz로 게임을 돌리고 모든 입력을 검증합니다. 클라이언트는 내 이동만 예측하고, 나머지는 100ms 보간으로 부드럽게 그립니다.</p>
+          </div>
+          <div class="deliver__cell">
+            <span class="deliver__no">SIMULATION</span>
+            <h3>결정론 시뮬레이션</h3>
+            <p>게임 규칙은 화면·네트워크와 분리된 결정론적 코드입니다. 같은 시드면 같은 결과가 나와, 한 판 전체를 테스트로 돌립니다.</p>
+          </div>
+          <div class="deliver__cell">
+            <span class="deliver__no">CONTENT</span>
+            <h3>스킬 52개</h3>
+            <p>실버·골드·프리즘 3등급 증강, 조합식과 추천 빌드가 있는 상점.</p>
+          </div>
+          <div class="deliver__cell">
+            <span class="deliver__no">BOTS</span>
+            <h3>혼자서도 한 판</h3>
+            <p>봇이 빈자리를 채웁니다. 스킬 예측 조준, 장판 회피, 핑 따르기, 아이템 구매까지 합니다.</p>
+          </div>
+        </div>
+
+        <p class="eyebrow work__eyebrow">Screens</p>
+        <figure class="frame reveal work__lead">
+          <div class="frame__bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="frame__url">JODEN</span>
+          </div>
+          <video src="/assets/video/joden_play.mp4" poster="/assets/img/joden_play_poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="후반 기지 앞 교전 플레이 영상"></video>
+        </figure>
+        <p class="gallery__cap">후반 기지 앞 교전</p>
+
+        <div class="gallery reveal">
+          <div class="g-half">
+            <div class="frame">
+              <div class="frame__bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="frame__url">증강</span></div>
+              <img src="/assets/img/joden_augment.jpg" alt="골드 등급 증강 카드 3장 선택 화면" />
+            </div>
+            <p class="gallery__cap">증강 선택 — 카드 3장, 카드마다 리롤 1회</p>
+          </div>
+          <div class="g-half">
+            <div class="frame">
+              <div class="frame__bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="frame__url">상점</span></div>
+              <img src="/assets/img/joden_shop.jpg" alt="아이템 상점 — 조합식과 추천 빌드" />
+            </div>
+            <p class="gallery__cap">상점 — 조합식과 추천 빌드</p>
+          </div>
+        </div>
+
+        <div class="gallery reveal">
+          <div class="g-half">
+            <div class="frame">
+              <div class="frame__bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="frame__url">대기실</span></div>
+              <img src="/assets/img/joden_lobby.jpg" alt="챔피언 13명과 봇을 넣은 대기실" />
+            </div>
+            <p class="gallery__cap">대기실 — 빈자리에 봇 넣기</p>
+          </div>
+          <div class="g-half">
+            <div class="frame">
+              <div class="frame__bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="frame__url">결과</span></div>
+              <img src="/assets/img/joden_result.jpg" alt="경기 결과 — 선수별 기록" />
+            </div>
+            <p class="gallery__cap">경기 결과 — 선수별 피해·회복·골드·빌드</p>
+          </div>
+        </div>
+
+        <p class="work__note">그림은 LPC(CC-BY-SA 3.0·OGA-BY 3.0 등), 아이콘은 game-icons.net(CC-BY 3.0), 이펙트는 CC0 팩, 폰트는 Galmuri(OFL)입니다.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--sunken contact" id="contact">
+      <div class="wrap">
+        <p class="eyebrow" style="justify-content:center">Contact</p>
+        <h2>만들 것이 있으신가요?</h2>
+        <p>홈페이지·랜딩 페이지·웹앱, 개발부터 배포·운영까지 맡겨 주세요.</p>
+        <a class="btn" href="mailto:catdog6210@gmail.com">이메일 보내기 <span class="arrow">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© 2026 김진욱 — Developer</span>
+      <span>Hand-coded</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll(".reveal");
+      if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        els.forEach(function (el) { el.classList.add("in"); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
