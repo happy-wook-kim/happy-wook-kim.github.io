@@ -20,11 +20,11 @@
 
 ### 개인 프로젝트
 
-- **뽑기 (bbobgi)** — 캐주얼 랜덤 추첨 게임 (React·TypeScript, [라이브](https://happy-wook-kim.github.io/bbobgi/))
-  - 카드·룰렛·사다리·경마·주사위 5종 미니게임
-- **속보 청첩장** — 누르면 뉴스 속보처럼 터지는 모바일 청첩장 (HTML 파일 하나, [라이브](https://happy-wook-kim.github.io/wedding-congrats/))
 - **JODEN** — 브라우저에서 1:1~2:2로 붙는 실시간 픽셀아트 대전 게임 (TypeScript·React·Canvas·socket.io)
   - 챔피언 13명, 증강 38종, 아이템 49종, 봇 대전
+- **뽑기 (bbobgi)** — 캐주얼 랜덤 추첨 게임 (React·TypeScript, [라이브](https://happy-wook-kim.github.io/bbobgi/))
+  - 카드·룰렛·사다리·경마·주사위 5종 미니게임
+- **청첩장** — 누르면 뉴스 속보처럼 터지는 모바일 청첩장 (HTML 파일 하나, [라이브](https://happy-wook-kim.github.io/wedding-congrats/))
 
 프로젝트는 하나씩 계속 추가됩니다.
 
@@ -56,9 +56,9 @@ index.html          # 홈 (프로젝트 카드 목록)
 work/
   ai-kalis.html     # K-건설안전 AI 콘텐츠 공모전
   nhisletter.html   # 국민건강보험공단 명절카드
-  bbobgi.html       # 뽑기 — 랜덤 추첨 게임
-  wedding.html      # 속보 청첩장
   joden.html        # JODEN — 실시간 대전 게임
+  bbobgi.html       # 뽑기 — 랜덤 추첨 게임
+  wedding.html      # 청첩장
 styles.css          # 공통 스타일 (디자인 토큰 · 브라우저 프레임 · 반응형 · print)
 assets/
   img/              # 스크린샷 · 카드 썸네일
